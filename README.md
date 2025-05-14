@@ -1,12 +1,43 @@
-# React + Vite
+# User Management System Documentation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Libraries Used
+- React.js
+- React Router DOM (for routing)
+- Axios (for API calls)
+- AOS (Animate On Scroll library)
+- Tailwind CSS (for styling)
 
-Currently, two official plugins are available:
+## Features Implemented
+1. **Authentication**
+   - User registration
+   - User login
+   - Protected routes
+   - Logout functionality
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. **User Management**
+   - List all users with pagination
+   - View user details
+   - Search functionality
 
-## Expanding the ESLint configuration
+3. **UI/UX**
+   - Responsive design
+   - Dark mode support
+   - Animated transitions
+   - Loading states
+   - Error handling
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+4. **Navigation**
+   - Separate navigation for landing page and dashboard
+   - Breadcrumbs for user detail page
+   - Mobile-friendly menu
+
+## Additional Features
+- Animated page transitions
+- Loading indicators
+- Form validation feedback
+- Responsive design for all screen sizes
+
+## Run
+- git clone https://github.com/Pashakhatamihasibuan/website-mini-project-react.git
+- npm install
+- npm run dev
