@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,9 +29,12 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center space-x-4">
-          <button className="hidden px-4 py-2 font-medium text-white transition-all duration-200 rounded-md shadow-lg md:block bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 shadow-indigo-500/20 dark:shadow-indigo-900/30">
+          <Link
+            to="/login"
+            className="hidden px-4 py-2 font-medium text-white transition-all duration-200 rounded-md shadow-lg md:block bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 shadow-indigo-500/20 dark:shadow-indigo-900/30"
+          >
             Login
-          </button>
+          </Link>
 
           {/* Mobile Menu Button */}
           <button onClick={toggleMenu} className="p-2 rounded-lg md:hidden hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Toggle menu">
@@ -54,9 +58,12 @@ const Navbar = () => {
           <MobileNavLink href="#features" text="Features" onClick={toggleMenu} />
           <MobileNavLink href="#testimonials" text="Testimonials" onClick={toggleMenu} />
           <MobileNavLink href="#pricing" text="Pricing" onClick={toggleMenu} />
-          <button className="w-full px-4 py-2 font-medium text-white transition-all duration-200 rounded-md bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700">
+          <Link
+            to="/login"
+            className="block w-full px-4 py-2 font-medium text-center text-white transition-all duration-200 rounded-md bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700"
+          >
             Login
-          </button>
+          </Link>
         </div>
       )}
     </>
