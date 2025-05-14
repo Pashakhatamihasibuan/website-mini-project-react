@@ -10,6 +10,9 @@ const RegisterPage = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+  // Check if form is valid (both fields filled)
+  const isFormValid = email.trim() !== "" && password.trim() !== "";
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -97,8 +100,10 @@ const RegisterPage = () => {
           <div>
             <button
               type="submit"
-              disabled={loading}
-              className="relative flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md group hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50"
+              disabled={loading || !isFormValid}
+              className={`relative flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md group hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ${
+                !isFormValid || loading ? "opacity-50 cursor-not-allowed" : ""
+              }`}
             >
               {loading ? (
                 <span className="flex items-center">
