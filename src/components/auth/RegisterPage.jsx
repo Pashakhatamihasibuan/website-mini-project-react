@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 
 const RegisterPage = () => {
@@ -51,9 +51,9 @@ const RegisterPage = () => {
           <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white">Create a new account</h2>
           <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
             Or{" "}
-            <a href="/login" className="font-medium text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300">
+            <Link to="/login" className="font-medium text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300">
               sign in to your existing account
-            </a>
+            </Link>
           </p>
         </div>
 
