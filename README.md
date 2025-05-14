@@ -21,7 +21,6 @@
 
 3. **UI/UX**
    - Responsive design
-   - Dark mode support
    - Animated transitions
    - Loading states
    - Error handling
